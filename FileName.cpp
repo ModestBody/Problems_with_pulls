@@ -1,5 +1,5 @@
 if (make_thread && (right - left > 100000)) {
-        task_counter->fetch_add(1);  // Увеличиваем счетчик задач
+        task_counter->fetch_add(1);  
         auto f = pool.push_task(quicksort, std::ref(array), left, j, 
                                 task_counter, completion_promise, std::ref(pool), make_thread);
     } else {
